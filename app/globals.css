@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-image: url(https://res.cloudinary.com/dmye53wps/image/upload/v1717255408/Landing_Page_g963nw.svg);
+  background-size: cover;
+  /* background-position: center;  */
+  color: #fff;
+  background-blend-mode: multiply;
+  
+}
