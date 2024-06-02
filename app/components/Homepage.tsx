@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import About from './About'
+import Voting from './Voting'
 
 const Homepage = () => {
   return (
@@ -12,6 +13,7 @@ const Homepage = () => {
           <button className='rounded-[40px] bg-white w-[172px] h-[57px] text-[#202020] text-[18px] font-bold leading-[27px]  '>Create poll</button>
         </section>
         <About />
+        <Voting />
     </main>
   )
 }
