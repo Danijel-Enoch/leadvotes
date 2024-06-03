@@ -37,7 +37,7 @@ const Voting = () => {
                           <p className='my-auto text-[14px] font-semibold leading-[21px] ml-[11px] '>{vote.address}</p>
                         </div>
                       </div>
-                      <button className='w-full bg-[#1B5CFE] py-[12px] rounded-[81px] text-[15px] font-semibold leading-[22.5px] mb-[15px] '>Enter</button>
+                      <button className='w-full bg-[#1B5CFE] hover:bg-[#1948b5] py-[12px] rounded-[81px] text-[15px] font-semibold leading-[22.5px] mb-[15px] '>Enter</button>
                     </div>
                     <section className='ml-[10px] '>
                       <Image src={yellow} alt='flower' className='mb-[8px] ' />
@@ -56,7 +56,7 @@ const Voting = () => {
                           <p className='my-auto text-[14px] font-semibold leading-[21px] ml-[11px] '>{vote.address}</p>
                         </div>
                       </div>
-                      <button className='w-full bg-[#1B5CFE] py-[12px] rounded-[81px] text-[15px] font-semibold leading-[22.5px] mb-[15px] '>Enter</button>
+                      <button className='w-full bg-[#1B5CFE] hover:bg-[#1948b5] py-[12px] rounded-[81px] text-[15px] font-semibold leading-[22.5px] mb-[15px] '>Enter</button>
                     </div>
                     <section className='ml-[10px] '>
                       <Image src={mount} alt='flower' className='mb-[8px] ' />
@@ -75,7 +75,7 @@ const Voting = () => {
                           <p className='my-auto text-[14px] font-semibold leading-[21px] ml-[11px] '>{vote.address}</p>
                         </div>
                       </div>
-                      <button className='w-full bg-[#1B5CFE] py-[12px] rounded-[81px] text-[15px] font-semibold leading-[22.5px] mb-[15px] '>Enter</button>
+                      <button className='w-full bg-[#1B5CFE] hover:bg-[#1948b5] py-[12px] rounded-[81px] text-[15px] font-semibold leading-[22.5px] mb-[15px] '>Enter</button>
                     </div>
                     <section className='ml-[10px] '>
                       <Image src={box} alt='flower' className='mb-[8px] ' />
@@ -94,7 +94,7 @@ const Voting = () => {
                           <p className='my-auto text-[14px] font-semibold leading-[21px] ml-[11px] '>{vote.address}</p>
                         </div>
                       </div>
-                      <button className='w-full bg-[#1B5CFE] py-[12px] rounded-[81px] text-[15px] font-semibold leading-[22.5px] mb-[15px] '>Enter</button>
+                      <button className='w-full bg-[#1B5CFE] hover:bg-[#1948b5] py-[12px] rounded-[81px] text-[15px] font-semibold leading-[22.5px] mb-[15px] '>Enter</button>
                     </div>
                     <section className='ml-[10px] '>
                       <Image src={ice} alt='flower' className='mb-[8px] ' />
@@ -102,7 +102,7 @@ const Voting = () => {
                     </section>
                   </div>
                 </div>
-                <button className='bg-[#1B5CFE] rounded-[110px]  text-[25px] font-semibold leading-[37.5px] mx-auto w-fit px-[40px] py-[19px] flex '>See more</button>
+                <button className='bg-[#1B5CFE] hover:bg-[#1948b5] rounded-[110px]  text-[25px] font-semibold leading-[37.5px] mx-auto w-fit px-[40px] py-[19px] flex '>See more</button>
 
               </section>
             )) }
