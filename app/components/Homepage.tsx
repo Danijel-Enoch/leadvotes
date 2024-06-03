@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import About from './About'
 import Voting from './Voting'
+import CreatePool from './CreatePool'
 
 const Homepage = () => {
   return (
@@ -14,6 +15,7 @@ const Homepage = () => {
         </section>
         <About />
         <Voting />
+        <CreatePool />
     </main>
   )
 }
