@@ -3,6 +3,8 @@ import Navbar from './Navbar'
 import Image from 'next/image'
 import votetree from '../assets/votetree.svg'
 import VotingDetails from '../data.json'
+import ContestantDetails from './ContestantDetails'
+import Footer from './Footer'
 
 interface VotingData{
     voteduration: string
@@ -34,6 +36,8 @@ const VotesHome = () => {
                     </div>
                 </div>
                  )) }
+                 <ContestantDetails />
+                 <Footer />
             </div>
 
         </section>
