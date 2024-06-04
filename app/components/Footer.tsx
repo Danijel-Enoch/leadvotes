@@ -10,7 +10,7 @@ import copyright from '../assets/copyright.svg'
 
 const Footer = () => {
   return (
-    <main className='flex justify-center mt-[139px] '>
+    <main className='flex justify-center mt-[139px] overflow-hidden  'data-aos="fade-in">
         <section className='w-[1286px] bg-[#1E1E1EA8] border-[1px] border-[#858585] rounded-t-[26px] flex justify-center '>
             <div className='mt-[50px] '>
                 <section className='flex cursor-pointer justify-between w-[335px] mb-[27.5px] mx-auto '>

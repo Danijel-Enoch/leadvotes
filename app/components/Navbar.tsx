@@ -3,7 +3,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const Navbar = () => {
   return (
-    <main className='flex justify-center mt-[30px] '>
+    <main className='flex justify-center mt-[30px] '  data-aos="fade-down">
       <section className='w-[80%]'>
         <div className='flex justify-between bg-[#1E1E1E6E] rounded-[66px] border-[2px] border-[#373737] h-[82px] '>
           <h1 className='ml-[30px] my-auto text-[25px] font-medium '><span className='text-[#1b5cfe]'>Lead</span>Votes</h1>

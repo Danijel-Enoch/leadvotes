@@ -6,8 +6,8 @@ const About = () => {
   return (
     <main className='flex justify-center mt-[152px] '>
         <section className='flex mx-auto w-fit '>
-            <Image src={john} alt='john-doe' className='ml-[51px]' />
-            <section className='ml-[51px] w-fit '>
+            <Image src={john} alt='john-doe' className='ml-[51px]' data-aos="fade-right"/>
+            <section className='ml-[51px] w-fit '  data-aos="fade-left">
                 <h2 className='text-[20px] font-bold leading-[30px] text-[#1B5CFE] w-fit '>ABOUT US</h2>
                 <h1 className='text-[35px] font-medium leading-[52.5px] w-[65%] '>We Can Work Together To Create a Better Future.</h1>
                 <p className='text-[19px] font-medium leading-[28.5px] my-[25px] w-[66%] '>The leader is eager to listen to the needs of the youth generation and to hear what solutions they have to the problems they are facing. He hopes to find solutions that will help them lead meaningful lives and make lasting change in the world.</p>

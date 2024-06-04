@@ -13,7 +13,7 @@ const Poll = () => {
           </div>
           <textarea className='outline outline-none bg-[#F9F9F9] text-[#00000066] pl-[50px] pt-[34px] rounded-[12px] border-[2px] border-[#939393] w-[857px] h-[272px] ' placeholder='Type a brief description here...' />
           <div className='w-fit mx-auto my-[23px] '>
-          <button className='font-semibold text-white bg-[#1B5CFE] w-[723px]  h-[76px] rounded-[10px] hover:bg-[#1948b5] '>Create Poll</button>
+          <button className='font-semibold text-white bg-[#1B5CFE] w-[723px]  h-[76px] rounded-[10px] hover:bg-[#1948b5] ' data-aos="zoom-in">Create Poll</button>
           </div>
         </form>
 
