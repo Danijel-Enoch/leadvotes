@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import About from './About'
 import Voting from './Voting'
 import CreatePool from './CreatePool'
+import Footer from './Footer'
 
 const Homepage = () => {
   return (
@@ -16,6 +17,7 @@ const Homepage = () => {
         <About />
         <Voting />
         <CreatePool />
+        <Footer />
     </main>
   )
 }
