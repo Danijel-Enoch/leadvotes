@@ -17,7 +17,7 @@ const VotesHome = () => {
   return (
     <main>
         <Navbar />
-        <section className='flex justify-center  '>
+        <section className='flex justify-center  overflow-hidden  '>
             <div className='w-[80%] mt-[25px] '>
                 <Image src={votetree} alt='tree-img' className='' data-aos="zoom-in" />
                 {votes.map((vote, index) => (

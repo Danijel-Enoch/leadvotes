@@ -4,7 +4,7 @@ import john from '../assets/john.svg'
 
 const About = () => {
   return (
-    <main className='flex justify-center mt-[152px] '>
+    <main className='flex justify-center mt-[152px] overflow-hidden '>
         <section className='flex mx-auto w-fit '>
             <Image src={john} alt='john-doe' className='ml-[51px]' data-aos="fade-right"/>
             <section className='ml-[51px] w-fit '  data-aos="fade-left">

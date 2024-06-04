@@ -4,7 +4,7 @@ import add from '../assets/add.png'
 
 const Poll = () => {
   return (
-    <main className='flex justify-center'>
+    <main className='flex justify-center overflow-hidden '>
       <section className='pt-[60px] bg-[#F9F9F9] rounded-b-[12px] w-full '>
         <form className='w-fit mx-auto text-[25px] font-medium leading-[37.5px] '>
           <div className='flex justify-between bg-[#F9F9F9] rounded-[12px] border-[2px] border-[#939393] mb-[30px] w-[857px] h-[102px] '>

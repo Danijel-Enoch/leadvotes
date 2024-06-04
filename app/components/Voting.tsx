@@ -20,7 +20,7 @@ const Voting = () => {
 
   const votes: VotingData[] = VotingDetails; 
   return (
-    <main className='flex justify-center mt-[152px] '>
+    <main className='flex justify-center mt-[152px]  overflow-hidden '>
         <section>
             <h1 className='text-center text-[50px] font-semibold leading-[75px] mb-[62px]  ' data-aos="fade-up">Start Voting</h1>
             {votes.map((vote, index) => (

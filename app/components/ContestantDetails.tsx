@@ -14,7 +14,7 @@ const ContestantDetails = () => {
 
     const votes: VotingData[] = VotingDetails;
     return (
-        <main className='flex justify-center mt-[52px] '>
+        <main className='flex justify-center mt-[52px] overflow-hidden'>
             <section>
                 <h1 className='text-center text-[55px] font-semibold leading-[82.5px] mb-[42px]  ' data-aos="fade-up"> Contestants</h1>
                 {votes.map((vote, index) => (
