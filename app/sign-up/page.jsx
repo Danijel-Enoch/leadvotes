@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { stringify } from "viem";
 
-export default function page() {
+export default function SignUp() {
 	const [studentData, setStudentData] = useState({});
 	const { isConnected, address } = useAccount();
 	const {
