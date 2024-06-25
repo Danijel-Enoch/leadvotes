@@ -1,22 +1,22 @@
 import { AceBaseClient } from "acebase-client";
 
 let db = new AceBaseClient({
-  host: "localhost",
-  port: 5757,
-  dbname: "myDb",
-  https: false,
+	host: "52.41.36.82",
+	port: 5757,
+	dbname: "myDb",
+	https: true
 });
 
 // Initialize Acebase and authenticate
 async function InitAnAuthDb() {
-  await db.ready();
-  await db.auth.signIn("admin", "AvwtoLsYDL1KhHUp");
+	await db.ready();
+	await db.auth.signIn("admin", "admin");
 }
 
 InitAnAuthDb()
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((err) => console.log(err));
+	.then((res) => {
+		console.log(res);
+	})
+	.catch((err) => console.log(err));
 
 export { db as database };
