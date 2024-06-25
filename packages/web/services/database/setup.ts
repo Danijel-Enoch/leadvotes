@@ -4,7 +4,7 @@ let db = new AceBaseClient({
 	host: "52.41.36.82",
 	port: 5757,
 	dbname: "myDb",
-	https: true
+	https: false
 });
 
 // Initialize Acebase and authenticate
