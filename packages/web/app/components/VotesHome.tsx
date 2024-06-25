@@ -64,13 +64,13 @@ const VotesHome = ({ pollsData }: any) => {
 								>
 									2 contestants
 								</button>
-								<button
+								{/* <button
 									className="lg:w-[159px] w-[90px] h-[44px] rounded-[44px] border-[1px] border-[#636363] text-[15px] lg:text-[20px] lg:leading-[30px] bg-[#1B5CFE5C] "
 									data-aos="fade-up"
 									data-duration="1600"
 								>
 									Edit Poll
-								</button>
+								</button> */}
 							</div>
 						</div>
 					))}

@@ -1,6 +1,6 @@
 const { AceBaseServer } = require("acebase-server");
 const dbname = "mydb";
-const server = new AceBaseServer(dbname, { host: "localhost", port: 5757, authentication: false });
+const server = new AceBaseServer(dbname, { host: "https://bluevotes.onrender.com", port: 5757, authentication: { username: "admin", password: "admin" } });
 server.on("ready", () => {
   console.log("SERVER ready");
 });
