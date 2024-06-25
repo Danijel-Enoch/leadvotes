@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { stringify } from "viem";
 import { createDataIfNotExists } from "../../services/database/database";
 import Navbar from "../components/Navbar";
+import { sleep } from "@/services/utils";
 
 export default function SignUp() {
 	const [studentData, setStudentData] = useState({
@@ -24,9 +25,12 @@ export default function SignUp() {
 	const {
 		data: signMessageData,
 		error,
-
+		isSuccess,
+		isIdle,
+		isPending,
 		signMessage,
-		variables
+		variables,
+		signMessageAsync
 	} = useSignMessage();
 	useEffect(() => {
 		if (isConnected) {
@@ -170,20 +174,51 @@ export default function SignUp() {
 								data-aos="zoom-in"
 								onClick={async () => {
 									if (studentData) {
-										if (studentData.creator) {
-											signMessage({
+										if (
+											studentData.creator &&
+											isConnected
+										) {
+											await signMessageAsync({
 												message: stringify(studentData)
-											});
-											await createDataIfNotExists(
-												"student/voter/" +
-													address?.toString(),
-												studentData,
-												() => {}
-											).then(() => {
-												toast.success(
-													"Signed up successfully"
-												);
-											});
+											})
+												.then(
+													async (signMessageData) => {
+														await createDataIfNotExists(
+															"student/voter/" +
+																address?.toString(),
+															studentData,
+															() => {}
+														)
+															.then(() => {
+																toast.success(
+																	"Signed up successfully"
+																);
+															})
+															.catch((error) => {
+																console.log(
+																	error
+																);
+																if (error) {
+																	toast.error(
+																		"User Already Exists"
+																	);
+																} else {
+																	toast.error(
+																		"Data Exist Already or something went wrong"
+																	);
+																}
+															});
+													}
+												)
+												.catch((error) => {
+													toast.error(
+														"Signature error Failed"
+													);
+												});
+
+											if (isSuccess) {
+											} else {
+											}
 										} else {
 											toast.error(
 												"Please connect your wallet"

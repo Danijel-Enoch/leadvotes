@@ -6,12 +6,12 @@ server.on("ready", () => {
 });
 
 /**
- *     username: admin
-[mydb]     password: %oMjdaoDAxE%Q0In
+ *   username: admin
+[mydb]     password: eX#i1nde!z@wJH9j
  */
 
 
 /**
- * username: admin
-[mydb]     password: p%ZJRScKJWExx8cp
+     username: admin
+[mydb]     password: RyhJ2vNf579FGLZ#
  */

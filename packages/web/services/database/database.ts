@@ -52,7 +52,8 @@ export async function createDataIfNotExists(
 	if (!data.exists()) {
 		await writeData(path, object);
 		await cb?.();
-	} else {
-		return data.val();
+	}
+	{
+		throw new Error("Data Already Exists");
 	}
 }
