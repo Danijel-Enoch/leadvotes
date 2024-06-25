@@ -122,7 +122,7 @@ export default function SignUp() {
 										faculty: e.target.value
 									});
 								}}
-								value={" Faculty Natural and Applied Science"}
+								value={studentData.faculty}
 							>
 								<option value="NAS">
 									Faculty Natural and Applied Science
