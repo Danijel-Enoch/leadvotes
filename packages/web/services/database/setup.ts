@@ -10,7 +10,7 @@ let db = new AceBaseClient({
 // Initialize Acebase and authenticate
 async function InitAnAuthDb() {
 	await db.ready();
-	await db.auth.signIn("admin", "9B9oFuKfeH%ATtJy");
+	await db.auth.signIn("admin", "LACwGeInwAgt@DW9");
 }
 
 InitAnAuthDb()
@@ -20,14 +20,3 @@ InitAnAuthDb()
 	.catch((err) => console.log(err));
 
 export { db as database };
-
-/**
- * 52.41.36.82
-54.191.253.12
-44.226.122.3
- */
-
-/**
- *  username: admin
-[mydb]     password: zJQwmThDjpLzCiDG
- */
