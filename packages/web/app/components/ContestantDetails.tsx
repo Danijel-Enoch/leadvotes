@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import VotingDetails from "../data.json";
 import "react-toastify/dist/ReactToastify.css";
 import Image from "next/image";
@@ -16,7 +16,21 @@ interface VotingData {
 }
 
 const ContestantDetails = ({ contestants, campaingId }: any) => {
+	async function handleNumberOfVotes(contestantsName: string) {
+		let numberOfVotes = 0;
+		const data = await readData("votes/" + campaingId);
+
+		Object.entries(data.val()).map(([key, value]: any) => {
+			console.log(value.name, contestantsName);
+			if (value.name === contestantsName) {
+				numberOfVotes++;
+			}
+		});
+
+		return numberOfVotes;
+	}
 	const { address, isConnected } = useAccount();
+
 	const {
 		data: signMessageData,
 		error,
@@ -36,14 +50,45 @@ const ContestantDetails = ({ contestants, campaingId }: any) => {
 			return data;
 		})
 		.slice(0, contestLength);
-	console.log({ listOfContestantsKeys });
+
+	const [constestantFullData, setContestantFullData]: any = useState([]);
+
 	const votes: VotingData[] = VotingDetails;
 
 	useEffect(() => {
 		if (isConnected) {
-			console.log({ address });
 		}
+		// get all contesants name
 	}, [isConnected, address]);
+	useEffect(() => {
+		const xdata = listOfContestantsKeys.map(async (data) => {
+			let x = 0;
+			const ddata = await readData("votes/" + campaingId);
+
+			console.log({ ddata });
+
+			Object.entries(ddata.val()).map(([key, value]: any) => {
+				console.log(value.name, data.name);
+				if (value.name === data.name) {
+					x++;
+				}
+			});
+
+			return {
+				name: data.name,
+				desc: data.desc,
+				votes: x
+			};
+		});
+		Promise.all(xdata)
+			.then((results) => {
+				//	console.log({ results });
+				setContestantFullData(results);
+			})
+			.catch((error) => {
+				console.error(error);
+			});
+	}, [contestants]);
 
 	async function handleVoting(contestantsName: string) {
 		//sign transactions
@@ -80,11 +125,12 @@ const ContestantDetails = ({ contestants, campaingId }: any) => {
 										"Voted for " + contestantsName
 									)
 								)
-								.catch((err) =>
+								.catch((err) => {
+									console.log({ err });
 									toast.error(
 										"Failed to vote for " + contestantsName
-									)
-								);
+									);
+								});
 						})
 						.catch((err) => {
 							toast.error("Error signing message");
@@ -109,8 +155,8 @@ const ContestantDetails = ({ contestants, campaingId }: any) => {
 					{" "}
 					Contestants
 				</h1>
-				{listOfContestantsKeys.length > 0 &&
-					listOfContestantsKeys.map((vote, index) => (
+				{constestantFullData.length > 0 &&
+					constestantFullData.map((vote: any, index: any) => (
 						<section key={index}>
 							<div className="grid grid-cols-1 lg:grid-cols-2 w-full justify-between lg:mb-[70px] ">
 								<div
@@ -128,9 +174,13 @@ const ContestantDetails = ({ contestants, campaingId }: any) => {
 											{vote.name}
 										</h1>
 										<div className="flex my-[20px] w-fit mx-auto">
-											<div className="bg-[#2C2C2C] rounded-[50%] w-[35px] h-[35px] "></div>
 											<p className="my-auto text-[14px] font-semibold leading-[21px] ml-[11px] ">
 												{vote.desc}
+											</p>
+										</div>
+										<div className="flex my-[20px] w-fit mx-auto">
+											<p className="my-auto text-[14px] font-semibold leading-[21px] ml-[11px] ">
+												{vote.votes} Votes
 											</p>
 										</div>
 										<button

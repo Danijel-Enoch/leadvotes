@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import Image from "next/image";
 import votetree from "../assets/votetree.svg";
@@ -6,6 +6,7 @@ import VotingDetails from "../data.json";
 import ContestantDetails from "./ContestantDetails";
 import Footer from "./Footer";
 import { trimWalletAddress } from "@/services/utils/parser";
+import { readData } from "@/services/database/database";
 
 interface VotingData {
 	voteduration: string;
@@ -14,6 +15,7 @@ interface VotingData {
 
 const VotesHome = ({ pollsData, campaingId }: any) => {
 	const votes: VotingData[] = VotingDetails;
+	const [amountOfvotes, setAmountOfvotes] = useState(0);
 	console.log({ pollsData });
 	const keysWithContestants = Object.keys(pollsData).filter((key) =>
 		key.includes("contestants_")
@@ -24,6 +26,12 @@ const VotesHome = ({ pollsData, campaingId }: any) => {
 			acc[key] = value;
 			return acc;
 		}, {});
+	useEffect(() => {
+		readData("votes/" + campaingId).then((data: any) => {
+			//console.log({ amountOfvotes: Object.keys(data.val()).length });
+			setAmountOfvotes(Object.keys(data.val()).length);
+		});
+	}, [campaingId]);
 	return (
 		<main>
 			<Navbar />
@@ -61,7 +69,7 @@ const VotesHome = ({ pollsData, campaingId }: any) => {
 								data-aos="fade-up"
 								data-duration="1400"
 							>
-								{pollsData?.vote + " Vote "}
+								{amountOfvotes + " Vote "}
 							</button>
 							<button
 								className="lg:w-[179px] w-[140px] h-[44px] rounded-[44px] border-[1px] border-[#636363] text-[15px] lg:text-[20px] lg:leading-[30px]"
