@@ -102,7 +102,7 @@ export default function CreatePollPage() {
 								Poll Description (Required)
 							</label>
 							<textarea
-								className="outline outline-none bg-[#151515] text-[#00000066] lg:pl-[50px]  pl-[15px] pt-[17px] lg:pt-[34px] rounded-[12px] border-[2px] text-white border-[#939393] lg:w-[510px] h-[140px] lg:h-[180px] w-full "
+								className="outline outline-none bg-[#151515] text-[#00000066] lg:pl-[20px]  pl-[15px] pt-[17px] lg:pt-[20px] rounded-[12px] border-[2px] text-white border-[#939393] lg:w-[510px] h-[140px] lg:h-[180px] w-full "
 								onChange={(e) =>
 									setPoolsData({
 										...pollsData,
