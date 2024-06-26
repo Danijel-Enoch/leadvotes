@@ -26,7 +26,7 @@ const CreatePool = () => {
   }
 
   return (
-    <main className='flex justify-center mt-[70px] lg:mt-[120px] overflow-hidden'>
+    <main className='flex justify-center mt-[50px] lg:mt-[120px] overflow-hidden'>
       <section className='font-medium'>
         <h1 className='font-semibold lg:text-[40px] text-[30px] lg:leading-[60px] mb-[30px]  'data-aos="fade-in">Create poll</h1>
         <div>

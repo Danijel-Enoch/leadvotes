@@ -158,7 +158,7 @@ const ContestantDetails = ({ contestants, campaingId }: any) => {
 				{constestantFullData.length > 0 &&
 					constestantFullData.map((vote: any, index: any) => (
 						<section key={index}>
-							<div className="grid grid-cols-1 lg:grid-cols-2 w-full justify-between lg:mb-[70px] ">
+							<div className="grid grid-cols-1 w-full justify-between lg:mb-[0px] ">
 								<div
 									className="flex lg:flex-row flex-col-reverse mb-[60px] lg:mb-[80px]"
 									data-aos="fade-up"

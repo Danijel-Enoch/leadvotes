@@ -1,14 +1,6 @@
 import React from "react";
 import VotingDetails from "../data.json";
 import Image from "next/image";
-import yellow from "../assets/yellow.svg";
-import river from "../assets/river.svg";
-import mount from "../assets/mount.svg";
-import trees from "../assets/trees.png";
-import box from "../assets/box.png";
-import brown from "../assets/brown.png";
-import ice from "../assets/ice.png";
-import bush from "../assets/bush.png";
 import useGetVotingPollsData from "@/hooks/useGetVotingPollsData";
 import {
 	epochToCustomFormat,
@@ -37,9 +29,9 @@ const Voting = () => {
 				{polls ? (
 					polls.map((vote: any, index: any) => (
 						<section key={index}>
-							<div className="grid grid-cols-1 lg:grid-cols-2 w-full justify-between mb-[60px] lg:mb-[70px] lg:w-[93%] mx-auto ">
+							<div className="grid grid-cols-1 lg:grid-cols-1 w-full justify-between mb-[25px] lg:mb-[0px] lg:w-[93%] mx-auto ">
 								<div
-									className="lg:flex mb-[60px] lg:mb-[80px]"
+									className="lg:flex lg:mb-[60px] mb-[20px] "
 									data-aos="fade-up"
 									data-duration="1400"
 								>
@@ -85,8 +77,8 @@ const Voting = () => {
 												</p>
 											</div>
 										</div>
-										<a href={"/votes/" + pollsKeys[index]}>
-											<div className="w-full bg-[#1B5CFE] hover:bg-[#1948b5] py-[12px] rounded-[81px] text-[15px] font-semibold leading-[22.5px] mb-[15px] ">
+										<a href={"/votes/" + pollsKeys[index]} className="m-auto ">
+											<div className="w-full bg-[#1B5CFE] text-center hover:bg-[#1948b5] py-[12px] rounded-[81px] text-[15px] font-semibold leading-[22.5px] mb-[15px] ">
 												Enter
 											</div>
 										</a>
@@ -98,7 +90,7 @@ const Voting = () => {
 												vote.img
 											}
 											alt="flower"
-											className="h-[100%] mb-[8px] w-[163px] lg:w-[231px] "
+											className="h-[290px] lg:mx-[0px] mx-auto  lg:h-[100%] mb-[8px] w-[290px] lg:w-[231px] "
 										/>
 										{/* <Image
 										src={river}
