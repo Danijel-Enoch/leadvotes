@@ -10,7 +10,7 @@ let db = new AceBaseClient({
 // Initialize Acebase and authenticate
 async function InitAnAuthDb() {
 	await db.ready();
-	await db.auth.signIn("admin", "RyhJ2vNf579FGLZ#");
+	await db.auth.signIn("admin", "9B9oFuKfeH%ATtJy");
 }
 
 InitAnAuthDb()

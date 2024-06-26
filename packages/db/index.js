@@ -15,3 +15,15 @@ server.on("ready", () => {
      username: admin
 [mydb]     password: RyhJ2vNf579FGLZ#
  */
+
+
+// 9B9oFuKfeH%ATtJy
+
+
+
+//my local 
+/**
+ * username: admin
+[mydb]     password: mhQvg5Fcupe99npD
+[mydb] 
+ */
