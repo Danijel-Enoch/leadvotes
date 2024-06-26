@@ -48,7 +48,7 @@ const Voting = () => {
 											{vote.name}
 										</h1>
 										<p className="text-[15px] font-medium leading-[22.5px] lg:w-[330px] my-[13px] lg:my-[27px] ">
-											{vote.desc}
+											{vote.desc.slice(0, 50)}
 										</p>
 										<div className="flex justify-between w-full mb-[26px] ">
 											<div className="bg-[#2C2C2C] rounded-[21px] text-[12px] font-semibold leading-[18px] py-[5px] px-[10px] my-auto ">

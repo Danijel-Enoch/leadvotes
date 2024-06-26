@@ -6,13 +6,14 @@ export default function useGetVotingPollsData() {
 	useEffect(() => {
 		const data = readData("polls/").then((data) => {
 			setPolls(data.val());
-			//console.log({ data: data.val() });
+
+			console.log({ data: data.val() });
 		});
 	}, []);
 
 	return {
-		polls: Object.values(polls),
-		pollsKeys: Object.keys(polls),
-		pollsInFull: polls
+		polls: Object.values(polls ? polls : {}),
+		pollsKeys: Object.keys(polls ? polls : {}),
+		pollsInFull: polls ? polls : {}
 	};
 }

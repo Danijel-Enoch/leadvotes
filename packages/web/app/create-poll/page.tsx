@@ -18,7 +18,7 @@ export default function CreatePollPage() {
 		name: "",
 		desc: "",
 		img: "",
-		amount: 1,
+		amount: 2,
 		vote: 0,
 		startTime: 0,
 		endTime: 0,
@@ -30,6 +30,7 @@ export default function CreatePollPage() {
 		error,
 
 		signMessage,
+		signMessageAsync,
 		variables
 	} = useSignMessage();
 	useEffect(() => {
@@ -361,16 +362,18 @@ export default function CreatePollPage() {
 										pollsData.desc &&
 										pollsData.amount
 									) {
-										signMessage({
+										signMessageAsync({
 											message: stringify(pollsData)
+										}).then(async (signMessageData) => {
+											await createDataIfNotExists(
+												"polls/" +
+													Math.random().toString(36),
+												pollsData,
+												() => {}
+											).then(() => {
+												toast.success("Poll created");
+											});
 										});
-
-										createDataIfNotExists(
-											"polls/" +
-												Math.random().toString(36),
-											pollsData,
-											() => {}
-										);
 
 										console.log({ signMessageData });
 									} else {

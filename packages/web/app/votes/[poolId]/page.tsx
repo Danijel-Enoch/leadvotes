@@ -19,15 +19,18 @@ const Pages = () => {
 			delay: 0
 		});
 		//	console.log(p);
-		const data = pollsInFull[p?.poolId.toString()];
-		setPollsData(data);
+		const data = pollsInFull[p?.poolId?.toString()];
+		if (data) setPollsData(data);
 		console.log({ data });
 	}, [pollsInFull, p]);
 
 	return (
 		<main className="flex justify-center  ">
 			<section className="lg:max-w-[1400px] w-[95%] lg:mx-[0px] mx-auto lg:w-full">
-				<VotesHome pollsData={pollsData && pollsData} />
+				<VotesHome
+					pollsData={pollsData && pollsData}
+					campaingId={p?.poolId}
+				/>
 			</section>
 		</main>
 	);

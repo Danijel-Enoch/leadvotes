@@ -3,12 +3,12 @@ export function trimWalletAddress(
 	startChars = 6,
 	endChars = 4
 ) {
-	if (address.length <= startChars + endChars) {
+	if (address?.length <= startChars + endChars) {
 		return address; // Return the full address if it's already short
 	}
 
-	const prefix = address.slice(0, startChars);
-	const suffix = address.slice(-endChars);
+	const prefix = address?.slice(0, startChars);
+	const suffix = address?.slice(-endChars);
 
 	return `${prefix}...${suffix}`;
 }
