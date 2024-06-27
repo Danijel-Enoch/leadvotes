@@ -302,7 +302,9 @@ export default function CreatePollPage() {
                       await createDataIfNotExists(
                         "polls/" + Math.random().toString(36),
                         pollsData,
-                        () => {},
+                        () => {
+                          toast.success("Poll created");
+                        },
                       ).then(() => {
                         toast.success("Poll created");
                       });
