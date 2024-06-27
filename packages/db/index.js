@@ -1,7 +1,7 @@
 const { AceBaseServer } = require("acebase-server");
 const dbname = "mydb";
 const server = new AceBaseServer(dbname, {
-  host: "0.0.0.0", port: 443, authentication: {
+  host: "0.0.0.0", port: 3000, authentication: {
     enabled: true,
     allowUserSignup: false, username: "admin", password: "LACwGeInwAgt@DW9"
   }
