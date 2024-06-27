@@ -161,7 +161,7 @@ const ContestantDetails = ({ contestants, campaingId }: any) => {
 						<section key={index}>
 							<div className="grid grid-cols-1 w-full justify-between lg:mb-[0px] ">
 								<div
-									className="flex lg:flex-row flex-col-reverse mb-[60px] lg:mb-[80px]"
+									className="flex lg:flex-row lg:w-fit w-[95%] mx-auto flex-col-reverse mb-[50px] lg:mb-[60px] "
 									data-aos="fade-up"
 									data-duration="1500"
 								>
@@ -170,8 +170,8 @@ const ContestantDetails = ({ contestants, campaingId }: any) => {
 										alt="desert"
 										className="lg:w-[347px] mt-[20px] lg:mt-[0px] lg:mr-[10px] w-[80%] lg:mx-[0px] mx-auto"
 									/>
-									<div className="w-[80%] lg:mx-[0px] mx-auto lg:w-[200px] bg-[#151515] rounded-[25px] pt-[28px] px-[30px] ">
-										<h1 className="text-[15px] font-semibold leading-[30px]  ">
+									<div className="w-[80%] lg:mx-[0px] mx-auto lg:w-[280px] bg-[#151515] rounded-[25px] pt-[28px] px-[30px] ">
+										<h1 className="text-[15px] font-semibold leading-[30px] text-center ">
 											{vote.name}
 										</h1>
 										<div className="flex my-[20px] w-fit mx-auto">

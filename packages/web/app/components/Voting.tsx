@@ -79,7 +79,7 @@ const Voting = () => {
 										</div>
 										<a href={"/votes/" + pollsKeys[index]} className="m-auto ">
 											<div className="w-full bg-[#1B5CFE] text-center hover:bg-[#1948b5] py-[12px] rounded-[81px] text-[15px] font-semibold leading-[22.5px] mb-[15px] ">
-												Enter
+												View
 											</div>
 										</a>
 									</div>
