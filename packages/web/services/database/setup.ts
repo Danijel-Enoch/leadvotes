@@ -1,7 +1,7 @@
 import { AceBaseClient } from "acebase-client";
 
 let db = new AceBaseClient({
-	host: "bluevotes.onrender.com",
+	host: "bluevotes-production.up.railway.app",
 	port: 443,
 	dbname: "mydb",
 	https: true
