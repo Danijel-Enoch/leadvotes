@@ -34,7 +34,9 @@ USER node
 
 # Copy remaining source code AFTER installing dependencies. 
 # Again, copy only the necessary files
-COPY --chown=node:node src/ .
+COPY --chown=node:node ./ .
+
+RUN yarn install
 
 # Indicate expected port
 EXPOSE 3000
