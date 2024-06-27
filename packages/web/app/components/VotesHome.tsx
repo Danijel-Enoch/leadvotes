@@ -29,7 +29,7 @@ const VotesHome = ({ pollsData, campaingId }: any) => {
 	useEffect(() => {
 		readData("votes/" + campaingId).then((data: any) => {
 			//console.log({ amountOfvotes: Object.keys(data.val()).length });
-			setAmountOfvotes(Object.keys(data.val()).length);
+			if (data.exists()) setAmountOfvotes(Object.keys(data.val()).length);
 		});
 	}, [campaingId]);
 	return (

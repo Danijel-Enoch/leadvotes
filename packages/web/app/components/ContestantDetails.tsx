@@ -67,12 +67,13 @@ const ContestantDetails = ({ contestants, campaingId }: any) => {
 
 			console.log({ ddata });
 
-			Object.entries(ddata.val()).map(([key, value]: any) => {
-				console.log(value.name, data.name);
-				if (value.name === data.name) {
-					x++;
-				}
-			});
+			if (ddata.exists())
+				Object.entries(ddata.val()).map(([key, value]: any) => {
+					console.log(value.name, data.name);
+					if (value.name === data.name) {
+						x++;
+					}
+				});
 
 			return {
 				name: data.name,

@@ -27,10 +27,11 @@ const Pages = () => {
 	return (
 		<main className="flex justify-center  ">
 			<section className="lg:max-w-[1400px] w-[95%] lg:mx-[0px] mx-auto lg:w-full">
-				<VotesHome
-					pollsData={pollsData && pollsData}
-					campaingId={p?.poolId}
-				/>
+				{pollsData ? (
+					<VotesHome pollsData={pollsData} campaingId={p?.poolId} />
+				) : (
+					<>Data not Found </>
+				)}
 			</section>
 		</main>
 	);
