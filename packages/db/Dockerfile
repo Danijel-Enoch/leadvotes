@@ -24,7 +24,7 @@ ENV NODE_ENV production
 
 # Install only production dependencies
 # Use cache mount to speed up install of existing dependencies
-
+RUN npm ci --only=production
 
 # Use non-root user
 # Use --chown on COPY commands to set file permissions
@@ -34,7 +34,7 @@ USER node
 
 # Copy remaining source code AFTER installing dependencies. 
 # Again, copy only the necessary files
-COPY --chown=node:node ./ .
+COPY --chown=node:node src/ .
 
 # Indicate expected port
 EXPOSE 3000
