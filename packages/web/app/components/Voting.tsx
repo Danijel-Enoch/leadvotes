@@ -18,10 +18,10 @@ const Voting = () => {
 	console.log({ polls });
 	const votes: VotingData[] = VotingDetails;
 	return (
-		<main className="flex justify-center mt-[90px] lg:mt-[152px]  overflow-hidden ">
+		<main className="flex bg-[#1B5CFE] justify-center mt-[90px] lg:mt-[152px]  overflow-hidden ">
 			<section>
 				<h1
-					className="text-center text-[30px] lg:text-[50px] font-semibold lg:leading-[75px] mb-[30px] lg:mb-[62px]  "
+					className="text-center text-[30px] mt-[40px] lg:mt-[90px] lg:text-[50px] font-semibold lg:leading-[75px] mb-[30px] lg:mb-[62px]  "
 					data-aos="fade-up"
 				>
 					Start Voting
@@ -29,7 +29,7 @@ const Voting = () => {
 				{polls ? (
 					polls.map((vote: any, index: any) => (
 						<section key={index}>
-							<div className="grid grid-cols-1 lg:grid-cols-1 w-full justify-between mb-[25px] lg:mb-[0px] lg:w-[93%] mx-auto ">
+							<div className="grid grid-cols-1 text-white lg:grid-cols-1 w-full justify-between mb-[25px] lg:mb-[0px] lg:w-[93%] mx-auto ">
 								<div
 									className="lg:flex lg:mb-[60px] mb-[20px] "
 									data-aos="fade-up"
