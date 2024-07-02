@@ -8,7 +8,9 @@ import Link from 'next/link'
 
 const Homepage = () => {
   return (
-    <main>
+    <>
+    <div className='flex justify-center '>
+    <main className='lg:max-w-[1400px] w-[95%] lg:mx-[0px] mx-auto lg:w-full' >
         <Navbar />
         <section className='text-center mt-[51px] lg:mt-[97px] overflow-hidden'>
           <h1 className='text-[30px] leading-[50px] lg:text-[67px] font-semibold lg:leading-[100.5px] '  data-aos="fade-up">Vote Without Rigging</h1>
@@ -17,10 +19,13 @@ const Homepage = () => {
           <button className='rounded-[40px] border-[1px] border-[#1B5CFE] bg-white hover:bg-[#1B5CFE] hover:text-white w-[172px] h-[57px] text-[#202020] text-[18px] font-bold leading-[27px] mt-[20px] lg:mt-[0px] '  data-aos="fade-up">Create poll</button></Link>
         </section>
         <About />
-        <Voting />
-        {/* <CreatePool /> */}
-        <Footer />
     </main>
+    </div>
+    <div className='w-full'>
+    <Voting />
+    <Footer />
+    </div>
+    </>
   )
 }
 
