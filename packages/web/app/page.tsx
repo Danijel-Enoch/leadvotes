@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <main className='flex justify-center  '>
-       <section className='lg:max-w-[1400px] w-[95%] lg:mx-[0px] mx-auto lg:w-full' >
+       <section className="w-full mx-auto">
         <Homepage />
        </section>
   </main>

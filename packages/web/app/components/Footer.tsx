@@ -11,7 +11,7 @@ import copyright from '../assets/copyright.svg'
 const Footer = () => {
   return (
     <main className='flex justify-center mt-[100px] lg:mt-[139px] overflow-hidden  'data-aos="fade-in">
-        <section className='w-full lg:w-[1286px] bg-[#1E1E1EA8] border-[1px] border-[#858585] rounded-t-[26px] flex justify-center '>
+        <section className='w-full lg:w-[1286px] bg-[#1E1E1E] border-[1px] border-[#858585] rounded-t-[26px] flex justify-center '>
             <div className='mt-[30px] lg:mt-[50px] '>
                 <section className='flex cursor-pointer justify-between w-[300px] lg:w-[335px] mb-[27.5px] mx-auto '>
                     <Image src={Facebook} alt='facebook' className='' />
