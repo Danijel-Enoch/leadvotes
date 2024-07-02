@@ -10,6 +10,7 @@ import { stringify } from "viem";
 import { createDataIfNotExists } from "../../services/database/database";
 import Navbar from "../components/Navbar";
 import { sleep } from "@/services/utils";
+import useUpload from "@/hooks/useUploadToIpfs";
 
 export default function SignUp() {
 	const [studentData, setStudentData] = useState({
@@ -21,6 +22,7 @@ export default function SignUp() {
 		creator: "",
 		matric: ""
 	});
+
 	const { isConnected, address } = useAccount();
 	const {
 		data: signMessageData,
@@ -187,7 +189,11 @@ export default function SignUp() {
 															"student/voter/" +
 																address?.toString(),
 															studentData,
-															() => {}
+															() => {
+																toast.success(
+																	"Signed up successfully"
+																);
+															}
 														)
 															.then(() => {
 																toast.success(

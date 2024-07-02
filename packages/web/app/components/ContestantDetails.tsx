@@ -15,7 +15,12 @@ interface VotingData {
 	address: string;
 }
 
-const ContestantDetails = ({ contestants, campaingId }: any) => {
+const ContestantDetails = ({
+	contestants,
+	campaingId,
+	pollStartTime,
+	pollEndTime
+}: any) => {
 	async function handleNumberOfVotes(contestantsName: string) {
 		let numberOfVotes = 0;
 		const data = await readData("votes/" + campaingId);
