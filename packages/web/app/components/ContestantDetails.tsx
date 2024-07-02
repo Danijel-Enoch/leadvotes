@@ -163,8 +163,8 @@ const ContestantDetails = ({
 				</h1>
 				{constestantFullData.length > 0 &&
 					constestantFullData.map((vote: any, index: any) => (
-						<section key={index}>
-							<div className="grid grid-cols-1 w-full justify-between lg:mb-[0px] ">
+						<section key={index} className="text-white">
+							<div className="grid grid-cols-1 w-full justify-between  lg:mb-[0px] ">
 								<div
 									className="flex lg:flex-row lg:w-fit w-[95%] mx-auto flex-col-reverse mb-[50px] lg:mb-[60px] "
 									data-aos="fade-up"
@@ -175,7 +175,7 @@ const ContestantDetails = ({
 										alt="desert"
 										className="lg:w-[347px] mt-[20px] lg:mt-[0px] lg:mr-[10px] w-[80%] lg:mx-[0px] mx-auto"
 									/>
-									<div className="w-[80%] lg:mx-[0px] mx-auto lg:w-[280px] bg-[#151515] rounded-[25px] pt-[28px] px-[30px] ">
+									<div className="w-[80%] text-white lg:mx-[0px] mx-auto lg:w-[280px] bg-[#151515] rounded-[25px] pt-[28px] px-[30px] ">
 										<h1 className="text-[15px] font-semibold leading-[30px] text-center ">
 											{vote.name}
 										</h1>
