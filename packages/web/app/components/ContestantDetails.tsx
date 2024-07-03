@@ -133,8 +133,8 @@ const ContestantDetails = ({
 								)
 								.catch((err) => {
 									console.log({ err });
-									toast.error(
-										"Failed to vote for " + contestantsName
+									toast.info(
+										"Loading Please Wait. Pls wait for few seconds"
 									);
 								});
 						})

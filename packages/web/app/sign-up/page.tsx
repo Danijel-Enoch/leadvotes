@@ -204,15 +204,15 @@ export default function SignUp() {
 																console.log(
 																	error
 																);
-																if (error) {
-																	toast.error(
-																		"User Already Exists"
-																	);
-																} else {
-																	toast.error(
-																		"Data Exist Already or something went wrong"
-																	);
-																}
+																// if (error) {
+																// 	toast.error(
+																// 		"User Already Exists"
+																// 	);
+																// } else {
+																// 	toast.error(
+																// 		"Data Exist Already or something went wrong"
+																// 	);
+																// }
 															});
 													}
 												)

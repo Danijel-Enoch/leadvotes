@@ -9,6 +9,7 @@ import {
 import { WagmiProvider } from "wagmi";
 import { mainnet, sepolia } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import { ThirdwebProvider } from "@thirdweb-dev/react";
 
 const myCustomTheme: Theme = {
 	blurs: {
@@ -79,7 +80,12 @@ export default function Providers({ children }: any) {
 		<WagmiProvider config={config}>
 			<QueryClientProvider client={queryClient}>
 				<RainbowKitProvider coolMode theme={myCustomTheme}>
+					<ThirdwebProvider
+						clientId="9ab18b41f7800bdae431e8b6f1648479" // You can get a client id from dashboard settings
+						activeChain="sepolia"
+					>
 						{children}
+					</ThirdwebProvider>
 				</RainbowKitProvider>
 			</QueryClientProvider>
 		</WagmiProvider>
